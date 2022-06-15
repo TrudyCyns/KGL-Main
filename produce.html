@@ -113,9 +113,12 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 mb-4">
-                            <div class="form-outline">
-                                <input type="text" id="form6Example2" class="form-control" />
-                                <label class="form-label" for="form6Example2">Type of Produce</label>
+                            <div>
+                                <select class="form-select" aria-label="Default select example" name="prodtype">
+                                    <option selected>Type of Produce</option>
+                                    <option value="cereal">Cereal</option>
+                                    <option value="other">Other</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -189,197 +192,19 @@
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-rounded btn-block">Place order</button>
+                    <button type="submit" class="btn btn-primary btn-rounded btn-block">Add Produce</button>
                 </form>
             </div>
         </section>
 
-        <!-- Add Sales -->
-        <section class="form-section" id="sales">
-            <div class="around bg-white col-md-10">
-                <!-- Tabs navs -->
-                <ul class="nav nav-tabs nav-justified mb-3" id="ex-with-icons" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="ex-with-icons-tab-1" data-mdb-toggle="tab" href="#ex-with-icons-tabs-1"
-                            role="tab" aria-controls="ex-with-icons-tabs-1" aria-selected="true"><i
-                                class="fas fa-cart-plus fa-fw me-2"></i>Add Sales</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="ex-with-icons-tab-2" data-mdb-toggle="tab" href="#ex-with-icons-tabs-2" role="tab"
-                            aria-controls="ex-with-icons-tabs-2" aria-selected="false"><i
-                                class="fas fa-credit-card fa-fw me-2"></i>Sales on Credit</a>
-                    </li>
-                </ul>
-                <!-- Tabs navs -->
-                
-                <!-- Tabs content -->
-                <div class="tab-content" id="ex-with-icons-content">
-                    <div class="tab-pane fade show active" id="ex-with-icons-tabs-1" role="tabpanel"
-                        aria-labelledby="ex-with-icons-tab-1">
-                        <form>
-                            <!-- 2 column grid layout with text inputs for the first and last names -->
-                            <div class="row">
-                                <div class="mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Name of Produce</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Tonnage (Kgs)</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Amount Paid (Ugx)</label>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Buyer's Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Sales Agent's Name</label>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="date" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Time of Produce</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="time" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Name of Dealer</label>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Contact</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Sell at (Ugx)</label>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-rounded btn-block">Place order</button>
-                        </form>
-                    </div>
-                    <div class="tab-pane fade" id="ex-with-icons-tabs-2" role="tabpanel" aria-labelledby="ex-with-icons-tab-2">
-                        <form>
-                            <!-- 2 column grid layout with text inputs for the first and last names -->
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Name of Produce</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Type of Produce</label>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="date" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Date of Procurement</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="date" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Time of Produce</label>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Tonnage (Kgs)</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Bought at (Ugx)</label>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="date" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Time of Produce</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Name of Dealer</label>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Contact</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Sell at (Ugx)</label>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-rounded btn-block">Place order</button>
-                        </form>
-                    </div>
-                </div>
-                <!-- Tabs content -->
-            </div>
-        </section>
     </main>
     <!--Main layout-->
-    
+    <!-- Copyright -->
+    <!-- <div class="text-center p-2 position-absolute bottom-0 end-0" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="#">Gertrude Nabasirye</a>
+    </div> -->
+    <!-- Copyright -->
 
 
     <!-- MDB -->
