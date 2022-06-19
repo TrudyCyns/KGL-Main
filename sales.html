@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produce | KGL</title>
+    <title>Sales | KGL</title>
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
@@ -26,16 +26,10 @@
                 <div class="list-group list-group-flush mx-3 mt-4">
                     <ul id="collapseExample1" class="collapse show list-group list-group-flush">
                         <li class="list-group-item py-1">
-                            <a href="#produce" class="text-reset">Add Produce</a>
+                            <a href="produce.html" class="text-reset">Add Produce</a>
                         </li>
                         <li class="list-group-item py-1">
-                            <a href="#sales" class="text-reset">Add Sales</a>
-                        </li>
-                        <li class="list-group-item py-1">
-                            <a href="#" class="text-reset">Deferred Sales</a>
-                        </li>
-                        <li class="list-group-item py-1">
-                            <a href="#" class="text-reset">View</a>
+                            <a href="sales.html" class="text-reset">Add Sales</a>
                         </li>
                     </ul>
                 </div>
@@ -98,101 +92,6 @@
 
     <!--Main layout-->
     <main style="margin-top: 58px">
-        <!-- Add Produce -->
-        <section class="form-section" id="produce">
-            <div class="around bg-white col-md-10">
-                <h1 class="mb-5 text-center">Add Produce</h1>
-                <form>
-                    <!-- 2 column grid layout with text inputs for the first and last names -->
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="form-outline">
-                                <input type="text" id="form6Example1" class="form-control" />
-                                <label class="form-label" for="form6Example1">Name of Produce</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="form-outline">
-                                <input type="text" id="form6Example2" class="form-control" />
-                                <label class="form-label" for="form6Example2">Type of Produce</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="form-outline">
-                                <input type="date" id="form6Example1" class="form-control" />
-                                <label class="form-label" for="form6Example1">Date of Procurement</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 mb-4">
-                            <div>
-                                <select class="form-select" aria-label="Default select example" name="timeselect">
-                                    <option selected>Select a time of Produce (Quarters)</option>
-                                    <option value="1">Quarter 1</option>
-                                    <option value="2">Quarter 2</option>
-                                    <option value="3">Quarter 3</option>
-                                    <option value="4">Quarter 4</option>
-                                </select>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Text input -->
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="form-outline">
-                                <input type="number" id="form6Example1" class="form-control" />
-                                <label class="form-label" for="form6Example1">Tonnage (Kgs)</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="form-outline">
-                                <input type="number" id="form6Example2" class="form-control" />
-                                <label class="form-label" for="form6Example2">Bought at (Ugx)</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text input -->
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="form-outline">
-                                <input type="date" id="form6Example2" class="form-control" />
-                                <label class="form-label" for="form6Example2">Time of Produce</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="form-outline">
-                                <input type="text" id="form6Example2" class="form-control" />
-                                <label class="form-label" for="form6Example2">Name of Dealer</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="form-outline">
-                                <input type="tel" id="form6Example1" class="form-control" />
-                                <label class="form-label" for="form6Example1">Contact</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="form-outline">
-                                <input type="number" id="form6Example2" class="form-control" />
-                                <label class="form-label" for="form6Example2">Sell at (Ugx)</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-rounded btn-block">Place order</button>
-                </form>
-            </div>
-        </section>
-
         <!-- Add Sales -->
         <section class="form-section" id="sales">
             <div class="around bg-white col-md-10">
@@ -287,7 +186,7 @@
                             </div>
 
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-rounded btn-block">Place order</button>
+                            <button type="submit" class="btn btn-primary btn-rounded btn-block">Add Sale</button>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="ex-with-icons-tabs-2" role="tabpanel"
@@ -298,58 +197,55 @@
                                 <div class="col-12 col-md-6 mb-4">
                                     <div class="form-outline">
                                         <input type="text" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Name of Produce</label>
+                                        <label class="form-label" for="form6Example1">Name of Buyer</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
                                     <div class="form-outline">
                                         <input type="text" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Type of Produce</label>
+                                        <label class="form-label" for="form6Example2">NIN</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
+                                <div class="col-12 col-md-4 mb-4">
                                     <div class="form-outline">
-                                        <input type="date" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Date of Procurement</label>
+                                        <input type="text" id="form6Example1" class="form-control" />
+                                        <label class="form-label" for="form6Example1">Location</label>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 mb-4">
+                                <div class="col-12 col-md-4 mb-4">
                                     <div class="form-outline">
-                                        <input type="date" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Time of Produce</label>
+                                        <input type="tel" id="form6Example2" class="form-control" />
+                                        <label class="form-label" for="form6Example2">Contact</label>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Tonnage (Kgs)</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
+                                <div class="col-12 col-md-4 mb-4">
                                     <div class="form-outline">
                                         <input type="number" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Bought at (Ugx)</label>
+                                        <label class="form-label" for="form6Example2">Amount Due (UGX)</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
+                                <div class="col-12 col-md-4 mb-4">
                                     <div class="form-outline">
                                         <input type="date" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Time of Produce</label>
+                                        <label class="form-label" for="form6Example2">Due Date</label>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 mb-4">
+                                <div class="col-12 col-md-4 mb-4">
                                     <div class="form-outline">
-                                        <input type="text" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Name of Dealer</label>
+                                        <input type="date" id="form6Example2" class="form-control" />
+                                        <label class="form-label" for="form6Example2">Date of Dispatch</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <input type="number" id="form6Example2" class="form-control" />
+                                        <label class="form-label" for="form6Example2">Tonnage (Kgs)</label>
                                     </div>
                                 </div>
                             </div>
@@ -357,14 +253,26 @@
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
                                     <div class="form-outline">
-                                        <input type="number" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Contact</label>
+                                        <input type="text" id="form6Example1" class="form-control" />
+                                        <label class="form-label" for="form6Example1">Produce Name</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
+                                    <div>
+                                        <select class="form-select" aria-label="Default select example" name="prodtype">
+                                            <option selected>Type of Produce</option>
+                                            <option value="cereal">Cereal</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col mb-4">
                                     <div class="form-outline">
-                                        <input type="number" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Sell at (Ugx)</label>
+                                        <input type="text" id="form6Example1" class="form-control" />
+                                        <label class="form-label" for="form6Example1">Add Sale on Credit</label>
                                     </div>
                                 </div>
                             </div>

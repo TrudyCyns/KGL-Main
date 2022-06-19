@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Gentium+Plus:regular,italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 *{
     box-sizing: border-box;
@@ -11,7 +11,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Gentium Plus', serif;
+    font-family: 'Nunito', sans-serif;
     background-color: #e9e2d4;
     font-size: 16px;
 }
@@ -58,6 +58,8 @@ button {
     background-color: #812c13;
     color: white;
     border-color: #812c13;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 /* Registration form */
