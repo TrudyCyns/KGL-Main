@@ -128,7 +128,7 @@
                                 <h3>Sales</h3>
                                 <div class="d-flex flex-column">
                                     <button class="btn btn-success mb-2" data-mdb-toggle="modal"
-                                        data-mdb-target="#newUsers">Add new
+                                        data-mdb-target="#newsales">Add new
                                         Sales</button>
                                     <a class="btn btn-success mb-2">View Sales</a>
                                 </div>
@@ -148,7 +148,7 @@
                                 <h3>Deferred Sales</h3>
                                 <div class="d-flex flex-column">
                                     <button class="btn btn-warning mb-2" data-mdb-toggle="modal"
-                                        data-mdb-target="#newUsers">Add Sales on Credit</button>
+                                        data-mdb-target="#newcredit">Add Sales on Credit</button>
                                     <a class="btn btn-warning mb-2">View Sales on Credit</a>
                                 </div>
                             </div>
@@ -193,7 +193,8 @@
                             <div class="row">
                                 <div class="col-12 col-md- mb-4">
                                     <div>
-                                        <input type="text" id="form6Example1" class="form-control" placeholder="Name of Produce"/>
+                                        <input type="text" id="form6Example1" class="form-control"
+                                            placeholder="Name of Produce" />
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
@@ -207,8 +208,9 @@
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <select class="form-select" aria-label="Default select example" name="timeselect">
-                                            <option selected>Select a time of Produce (Quarters)</option>
+                                        <select class="form-select" aria-label="Default select example"
+                                            name="timeselect">
+                                            <option selected>Time of Produce (Quarters)</option>
                                             <option value="1">Quarter 1</option>
                                             <option value="2">Quarter 2</option>
                                             <option value="3">Quarter 3</option>
@@ -237,24 +239,28 @@
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <input type="number" id="form6Example1" class="form-control" placeholder="Tonnage (Kgs)"/>
+                                        <input type="number" id="form6Example1" class="form-control"
+                                            placeholder="Tonnage (Kgs)" />
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <input type="number" id="form6Example2" class="form-control" placeholder="Bought at (Ugx)"/>
+                                        <input type="number" id="form6Example2" class="form-control"
+                                            placeholder="Bought at (Ugx)" />
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <input type="text" id="form6Example2" class="form-control" placeholder="Name of Dealer"/>
+                                        <input type="text" id="form6Example2" class="form-control"
+                                            placeholder="Name of Dealer" />
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <select class="form-select" aria-label="Default select example" name="timeselect">
+                                        <select class="form-select" aria-label="Default select example"
+                                            name="timeselect">
                                             <option selected>Type of Dealer</option>
                                             <option value="Individual">Individual</option>
                                             <option value="farm">Farm</option>
@@ -267,12 +273,14 @@
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <input type="tel" id="form6Example1" class="form-control" placeholder="Contact" />
+                                        <input type="tel" id="form6Example1" class="form-control"
+                                            placeholder="Contact" />
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <input type="number" id="form6Example2" class="form-control" placeholder="Sell at (Ugx)" />
+                                        <input type="number" id="form6Example2" class="form-control"
+                                            placeholder="Sell at (Ugx)" />
                                     </div>
                                 </div>
                             </div>
@@ -281,6 +289,179 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-secondary">Save Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sales Modal -->
+        <div class="modal fade" id="newsales" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Sale</h5>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <div class="row">
+                                <div class="col-12 mb-4">
+                                    <input type="text" id="form6Example1" class="form-control"
+                                        placeholder="Name of Produce" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <div>
+                                        <input type="number" id="form6Example1" class="form-control"
+                                            placeholder="Tonnage (Kgs)" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <div>
+                                        <input type="number" id="form6Example2" class="form-control"
+                                            placeholder="Amount Paid (Ugx)" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <div>
+                                        <input type="text" id="form6Example1" class="form-control"
+                                            placeholder="Buyer's Name" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <div>
+                                        <input type="text" id="form6Example2" class="form-control"
+                                            placeholder="Sales Agent's Name" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <div>
+                                        <label class="form-label" for="form6Example1">Date of Sale</label>
+                                        <input type="date" id="form6Example1" class="form-control" placeholder="Buyer's Contact" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <div>
+                                        <label class="form-label" for="form6Example2">Time of Sale</label>
+                                        <input type="time" id="form6Example2" class="form-control" placeholder="Sell at" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary">Save Sale Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Deferred Sales Modal -->
+        <div class="modal fade" id="newcredit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Sale</h5>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <form>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row">
+                            <div class="col-12 col-md-4 mb-4">
+                                <div >
+                                    <input type="text" id="form6Example1" class="form-control" placeholder="Buyer's Name"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div >
+                                    <input type="text" id="form6Example2" class="form-control" placeholder="NIN"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div>
+                                    <input type="text" id="form6Example1" class="form-control" placeholder="Location"/>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                           
+                            <div class="col-12 col-md-4 mb-4">
+                                <div >
+                                    <input type="tel" id="form6Example2" class="form-control" placeholder="Buyer's Contact"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div >
+                                    <input type="number" id="form6Example2" class="form-control" placeholder="Amount Due (UGX)"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div>
+                                    <input type="number" id="form6Example2" class="form-control" placeholder="Tonnage (Kgs)"/>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-12 col-md-4 mb-4">
+                                <div >
+                                    <input type="date" id="form6Example2" class="form-control" />
+                                    <label class="form-label" for="form6Example2">Due Date</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-4">
+                                <div >
+                                    <input type="date" id="form6Example2" class="form-control" />
+                                    <label class="form-label" for="form6Example2">Date of Dispatch</label>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-4">
+                                <div >
+                                    <input type="text" id="form6Example1" class="form-control" />
+                                    <label class="form-label" for="form6Example1">Produce Name</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mb-4">
+                                <div>
+                                    <select class="form-select" aria-label="Default select example" name="prodtype">
+                                        <option selected>Type of Produce</option>
+                                        <option value="cereal">Cereal</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col mb-4">
+                                <div >
+                                    <input type="text" id="form6Example1" class="form-control" />
+                                    <label class="form-label" for="form6Example1">Add Sale on Credit</label>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-rounded btn-block">Place order</button>
+                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary">Save Sale Details</button>
                     </div>
                 </div>
             </div>
