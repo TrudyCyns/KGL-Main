@@ -108,8 +108,8 @@
                                 <h3>Produce Details</h3>
                                 <div class="d-flex flex-column">
                                     <button class="btn btn-info mb-2" data-mdb-toggle="modal"
-                                        data-mdb-target="#newprod">Add a Procurement</button>
-                                    <a class="btn btn-info mb-2">View a Procurement</a>
+                                        data-mdb-target="#newprod">Add Procurement</button>
+                                    <a class="btn btn-info mb-2">View Procurement</a>
                                 </div>
 
                             </div>
@@ -167,7 +167,7 @@
                                 <h3>Users</h3>
                                 <div class="d-flex flex-column">
                                     <button class="btn btn-info mb-2" data-mdb-toggle="modal"
-                                        data-mdb-target="#newUsers">Add
+                                        data-mdb-target="#newuser">Add
                                         new Users</button>
                                     <a class="btn btn-info mb-2">View Users</a>
                                 </div>
@@ -179,7 +179,7 @@
         </div>
 
         <!-- Modals -->
-        <!-- Users Modal - start -->
+        <!-- Produce Modal -->
         <div class="modal fade" id="newprod" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -223,13 +223,13 @@
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <label class="form-label" for="form6Example1">Date of Procurement</label>
+                                        <label for="form6Example1">Date of Procurement</label>
                                         <input type="date" id="form6Example1" class="form-control" />
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <label class="form-label" for="form6Example2">Time of Produce</label>
+                                        <label for="form6Example2">Time of Produce</label>
                                         <input type="date" id="form6Example2" class="form-control" />
                                     </div>
                                 </div>
@@ -344,14 +344,16 @@
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <label class="form-label" for="form6Example1">Date of Sale</label>
-                                        <input type="date" id="form6Example1" class="form-control" placeholder="Buyer's Contact" />
+                                        <label for="form6Example1">Date of Sale</label>
+                                        <input type="date" id="form6Example1" class="form-control"
+                                            placeholder="Buyer's Contact" />
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-4">
                                     <div>
-                                        <label class="form-label" for="form6Example2">Time of Sale</label>
-                                        <input type="time" id="form6Example2" class="form-control" placeholder="Sell at" />
+                                        <label for="form6Example2">Time of Sale</label>
+                                        <input type="time" id="form6Example2" class="form-control"
+                                            placeholder="Sell at" />
                                     </div>
                                 </div>
                             </div>
@@ -373,95 +375,195 @@
                         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    <form>
-                        <!-- 2 column grid layout with text inputs for the first and last names -->
-                        <div class="row">
-                            <div class="col-12 col-md-4 mb-4">
-                                <div >
-                                    <input type="text" id="form6Example1" class="form-control" placeholder="Buyer's Name"/>
+                        <form>
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="form6Example1" class="form-control"
+                                            placeholder="Buyer's Name" />
+                                        <label class="form-label" for="firstName">Buyer's Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="form6Example2" class="form-control" placeholder="NIN" />
+                                        <label class="form-label" for="firstName">NIN</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="form6Example1" class="form-control"
+                                            placeholder="Location" />
+                                        <label class="form-label" for="firstName">Location</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4 mb-4">
-                                <div >
-                                    <input type="text" id="form6Example2" class="form-control" placeholder="NIN"/>
+
+                            <div class="row">
+                                <div class="col-12 col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <input type="tel" id="form6Example2" class="form-control"
+                                            placeholder="" />
+                                        <label class="form-label" for="firstName">Buyer's Contact</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <input type="number" id="form6Example2" class="form-control"
+                                            placeholder="" />
+                                        <label class="form-label" for="firstName">Amount Due (UGX)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <input type="number" id="form6Example2" class="form-control"
+                                            placeholder="" />
+                                        <label class="form-label" for="firstName">Tonnage (Kgs)</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4 mb-4">
-                                <div>
-                                    <input type="text" id="form6Example1" class="form-control" placeholder="Location"/>
+
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <div>
+                                        <label for="form6Example2">Due Date</label>
+                                        <input type="date" id="form6Example2" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <div>
+                                        <label for="form6Example2">Date of Dispatch</label>
+                                        <input type="date" id="form6Example2" class="form-control" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    
-                        <div class="row">
-                           
-                            <div class="col-12 col-md-4 mb-4">
-                                <div >
-                                    <input type="tel" id="form6Example2" class="form-control" placeholder="Buyer's Contact"/>
+
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="form6Example1" class="form-control"
+                                            placeholder="" />
+                                        <label class="form-label" for="firstName">Name of Produce</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-4">
+                                    <div>
+                                        <select class="form-select" aria-label="Default select example" name="prodtype">
+                                            <option selected>Type of Produce</option>
+                                            <option value="cereal">Cereal</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4 mb-4">
-                                <div >
-                                    <input type="number" id="form6Example2" class="form-control" placeholder="Amount Due (UGX)"/>
+
+                            <div class="row">
+                                <div class="col mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="salesname" class="form-control" />
+                                        <label class="form-label" for="salesname">Sales Agent's Name</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4 mb-4">
-                                <div>
-                                    <input type="number" id="form6Example2" class="form-control" placeholder="Tonnage (Kgs)"/>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="row">
-                            <div class="col-12 col-md-4 mb-4">
-                                <div >
-                                    <input type="date" id="form6Example2" class="form-control" />
-                                    <label class="form-label" for="form6Example2">Due Date</label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4 mb-4">
-                                <div >
-                                    <input type="date" id="form6Example2" class="form-control" />
-                                    <label class="form-label" for="form6Example2">Date of Dispatch</label>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    
-                        <div class="row">
-                            <div class="col-12 col-md-6 mb-4">
-                                <div >
-                                    <input type="text" id="form6Example1" class="form-control" />
-                                    <label class="form-label" for="form6Example1">Produce Name</label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 mb-4">
-                                <div>
-                                    <select class="form-select" aria-label="Default select example" name="prodtype">
-                                        <option selected>Type of Produce</option>
-                                        <option value="cereal">Cereal</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="row">
-                            <div class="col mb-4">
-                                <div >
-                                    <input type="text" id="form6Example1" class="form-control" />
-                                    <label class="form-label" for="form6Example1">Add Sale on Credit</label>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary btn-rounded btn-block">Place order</button>
-                    </form>
+                        </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-secondary">Save Sale Details</button>
+                        <button type="button" class="btn btn-danger" data-mdb-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary">Save Sale on Credit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Users Modal -->
+        <div class="modal fade" id="newuser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Sales Agent</h5>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="firstName" class="form-control form-control-lg" />
+                                        <label class="form-label" for="firstName">First Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="lastName" class="form-control form-control-lg" />
+                                        <label class="form-label" for="lastName">Last Name</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div>
+                                        <label for="position">Position</label>
+                                        <input type="text" class="form-control form-control-lg" id="position"
+                                            value="Sales Agent" readonly />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <h6 class="mb-2 pb-1">Gender: </h6>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="femaleGender" value="option1" checked />
+                                        <label class="form-check-label" for="femaleGender">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="maleGender" value="option2" />
+                                        <label class="form-check-label" for="maleGender">Male</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 pb-2">
+                                    <div class="form-outline">
+                                        <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                                        <label class="form-label" for="emailAddress">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4 pb-2">
+                                    <div class="form-outline">
+                                        <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                                        <label class="form-label" for="phoneNumber">Contact</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4 pb-2">
+                                <div class="form-outline">
+                                    <input type="email" id="emailAddress" class="form-control form-control-lg"
+                                        readonly />
+                                    <label class="form-label" for="emailAddress">Branch</label>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-6 mb-4 pb-2">
+                                    <div class="form-outline">
+                                        <input type="password" id="pass" class="form-control form-control-lg" />
+                                        <label class="form-label" for="pass">Password</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4 pb-2">
+                                    <div class="form-outline">
+                                        <input type="password" id="pass" class="form-control form-control-lg" />
+                                        <label class="form-label" for="pass">Confirm Password</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-mdb-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary">Save Sales Agent</button>
                     </div>
                 </div>
             </div>
