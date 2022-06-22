@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manager Dashboard | KGL</title>
+    <title>Sales Agent Dashboard | KGL</title>
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
@@ -51,25 +51,6 @@
 
                 <!-- Right elements -->
                 <div class="d-flex align-items-center">
-                    <!-- Notifications -->
-                    <div class="dropdown">
-                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                            role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-bell"></i>
-                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item" href="#">Some news</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Another news</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </li>
-                        </ul>
-                    </div>
                     <!-- Avatar -->
                     <div class="dropdown">
                         <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
@@ -97,27 +78,7 @@
     <main style="margin-top: 58px">
         <!-- Cards -->
         <div class="row">
-            <div class="col-xl-3 col-sm-6 col-12 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between px-md-1">
-                            <div class="align-self-center">
-                                <i class="fas fas fa-cart-plus text-info fa-3x"></i>
-                            </div>
-                            <div class="text-end">
-                                <h3>Produce Details</h3>
-                                <div class="d-flex flex-column">
-                                    <button class="btn btn-info mb-2" data-mdb-toggle="modal"
-                                        data-mdb-target="#newprod">Add Procurement</button>
-                                    <a class="btn btn-info mb-2">View Procurement</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 col-12 mb-4">
+            <div class="col-sm-6 col-12 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between px-md-1">
@@ -137,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-sm-6 col-12 mb-4">
+            <div class="col-sm-6 col-12 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between px-md-1">
@@ -156,141 +117,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-sm-6 col-12 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between px-md-1">
-                            <div class="align-self-center">
-                                <i class="fas fa-users text-info fa-3x"></i>
-                            </div>
-                            <div class="text-end">
-                                <h3>Users</h3>
-                                <div class="d-flex flex-column">
-                                    <button class="btn btn-info mb-2" data-mdb-toggle="modal"
-                                        data-mdb-target="#newuser">Add
-                                        new Users</button>
-                                    <a class="btn btn-info mb-2">View Users</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Modals -->
-        <!-- Produce Modal -->
-        <div class="modal fade" id="newprod" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add Procurement</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="row">
-                                <div class="col-12 col-md- mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Name of Produce</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div>
-                                        <select class="form-select" aria-label="Default select example" name="prodtype">
-                                            <option selected>Type of Produce</option>
-                                            <option value="cereal">Cereal</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div>
-                                        <select class="form-select" aria-label="Default select example"
-                                            name="timeselect">
-                                            <option selected>Time of Produce (Quarters)</option>
-                                            <option value="1">Quarter 1</option>
-                                            <option value="2">Quarter 2</option>
-                                            <option value="3">Quarter 3</option>
-                                            <option value="4">Quarter 4</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div>
-                                        <label for="form6Example1">Date of Procurement</label>
-                                        <input type="date" id="form6Example1" class="form-control" />
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div>
-                                        <label for="form6Example2">Time of Produce</label>
-                                        <input type="date" id="form6Example2" class="form-control" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Tonnage (Kgs)</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Bought at (Ugx)</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Name of Dealer</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div>
-                                        <select class="form-select" aria-label="Default select example"
-                                            name="timeselect">
-                                            <option selected>Type of Dealer</option>
-                                            <option value="Individual">Individual</option>
-                                            <option value="farm">Farm</option>
-                                            <option value="company">Company</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="tel" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Contact</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Sell at (Ugx)</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-secondary">Save Details</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Sales Modal -->
         <div class="modal fade" id="newsales" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -407,13 +236,15 @@
                                 </div>
                                 <div class="col-12 col-md-4 mb-4">
                                     <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example2" class="form-control" placeholder="" />
+                                        <input type="number" min="0" id="form6Example2" class="form-control"
+                                            placeholder="" />
                                         <label class="form-label" for="firstName">Amount Due (UGX)</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 mb-4">
                                     <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example2" class="form-control" placeholder="" />
+                                        <input type="number" min="0" id="form6Example2" class="form-control"
+                                            placeholder="" />
                                         <label class="form-label" for="firstName">Tonnage (Kgs)</label>
                                     </div>
                                 </div>
@@ -469,99 +300,6 @@
                 </div>
             </div>
         </div>
-        <!-- Users Modal -->
-        <div class="modal fade" id="newuser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add Sales Agent</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="firstName" class="form-control form-control-lg" />
-                                        <label class="form-label" for="firstName">First Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="lastName" class="form-control form-control-lg" />
-                                        <label class="form-label" for="lastName">Last Name</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div>
-                                        <label for="position">Position</label>
-                                        <input type="text" class="form-control form-control-lg" id="position"
-                                            value="Sales Agent" readonly />
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <h6 class="mb-2 pb-1">Gender: </h6>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="femaleGender" value="option1" checked />
-                                        <label class="form-check-label" for="femaleGender">Female</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="maleGender" value="option2" />
-                                        <label class="form-check-label" for="maleGender">Male</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6 mb-4 pb-2">
-                                    <div class="form-outline">
-                                        <input type="email" id="emailAddress" class="form-control form-control-lg" />
-                                        <label class="form-label" for="emailAddress">Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4 pb-2">
-                                    <div class="form-outline">
-                                        <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
-                                        <label class="form-label" for="phoneNumber">Contact</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4 pb-2">
-                                <div class="form-outline">
-                                    <input type="email" id="emailAddress" class="form-control form-control-lg"
-                                        readonly />
-                                    <label class="form-label" for="emailAddress">Branch</label>
-                                </div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col-md-6 mb-4 pb-2">
-                                    <div class="form-outline">
-                                        <input type="password" id="pass" class="form-control form-control-lg" />
-                                        <label class="form-label" for="pass">Password</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4 pb-2">
-                                    <div class="form-outline">
-                                        <input type="password" id="pass" class="form-control form-control-lg" />
-                                        <label class="form-label" for="pass">Confirm Password</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-secondary">Save Sales Agent</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Modals - end -->
     </main>
     <!--Main layout-->
@@ -572,7 +310,6 @@
             © 2022 | Gertrude Nabasirye
         </div>
     </footer>
-
     <!-- Copyright -->
 
     <!-- MDB -->
