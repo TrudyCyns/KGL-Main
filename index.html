@@ -21,8 +21,10 @@
     <section class="bg">
         <div id="banner">
             <img src="./images/logo.svg" alt="KGL Logo" height="250px">
-            <h3 style="color: #6a2510; font-weight: 900; font-size: 30px; padding: 20px;">Dealers in Beans, Grain Maize, Soy Beans, Cowpeas.</h3>
-            <button class="btn btn-primary me-md-2 mb-2" data-mdb-toggle="modal" data-mdb-target="#newuser">Login <span>or</span> Register</button>
+            <h3 style="color: #6a2510; font-weight: 900; font-size: 30px; padding: 20px;">Dealers in Beans, Grain Maize,
+                Soy Beans, Cowpeas.</h3>
+            <button class="btn btn-primary me-md-2 mb-2" data-mdb-toggle="modal" data-mdb-target="#newuser">Login
+                <span>or</span> Register</button>
         </div>
     </section>
 
@@ -38,103 +40,112 @@
                     <!-- Pills navs -->
                     <ul id="pills-id" class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
-                                aria-controls="pills-login" aria-selected="true">Login</a>
+                            <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login"
+                                role="tab" aria-controls="pills-login" aria-selected="true">Login</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
-                                aria-controls="pills-register" aria-selected="false">Register</a>
+                            <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register"
+                                role="tab" aria-controls="pills-register" aria-selected="false">Register</a>
                         </li>
                     </ul>
                     <!-- Pills navs -->
                     <!-- Pills content -->
                     <div class="tab-content">
-                        <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                        <div class="tab-pane fade show active" id="pills-login" role="tabpanel"
+                            aria-labelledby="tab-login">
                             <form>
                                 <!-- Email input -->
-                                <div class="form-outline mb-4">
-                                    <input type="email" id="loginName" class="form-control" />
+                                <div class="form-outline mb-3">
+                                    <input type="email" id="loginName" class="form-control" required />
                                     <label class="form-label" for="loginName">Email or username</label>
                                 </div>
-                    
+
                                 <!-- Password input -->
-                                <div class="form-outline mb-4">
-                                    <input type="password" id="loginPassword" class="form-control" />
+                                <div class="form-outline mb-3">
+                                    <input type="password" id="loginPassword" class="form-control" required />
                                     <label class="form-label" for="loginPassword">Password</label>
                                 </div>
-                    
+
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-3">Login</button>
                             </form>
                         </div>
                         <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-                            <form>
+                            <form name="register">
                                 <div class="row">
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-3" id="fname_field">
                                         <div class="form-outline">
-                                            <input type="text" id="firstName" class="form-control form-control-lg" />
+                                            <input type="text" name="firstname" class="form-control form-control-lg"
+                                                onblur="fNameVal(3,15)" />
                                             <label class="form-label" for="firstName">First Name</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-3" id="lname_field">
                                         <div class="form-outline">
-                                            <input type="text" id="lastName" class="form-control form-control-lg" />
+                                            <input type="text" name="lastname" class="form-control form-control-lg"
+                                                onblur="lNameVal(3,15)" />
                                             <label class="form-label" for="lastName">Last Name</label>
                                         </div>
                                     </div>
                                 </div>
-                            
+
                                 <div class="row">
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-3" id="pos_field">
                                         <div>
                                             <label for="position">Position</label>
-                                            <input type="text" class="form-control form-control-lg" id="position" value="Director" readonly />
+                                            <select class="form-select" aria-label="Default select example" name="position" onblur="posVal()">
+                                                <option value="default" selected>Choose your Position</option>
+                                                <option value="dir">Director</option>
+                                                <option value="mgr">Manager</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-3">
                                         <h6 class="mb-2 pb-1">Gender: </h6>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender" value="option1"
-                                                checked />
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="femaleGender" value="option1" checked />
                                             <label class="form-check-label" for="femaleGender">Female</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                                                value="option2" />
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="maleGender" value="option2" />
                                             <label class="form-check-label" for="maleGender">Male</label>
                                         </div>
                                     </div>
                                 </div>
-                            
+
                                 <div class="row">
-                                    <div class="col-md-6 mb-4 pb-2">
+                                    <div class="col-md-6 mb-3 pb-2">
                                         <div class="form-outline">
-                                            <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                                            <input type="email" id="emailAddress"
+                                                class="form-control form-control-lg" />
                                             <label class="form-label" for="emailAddress">Email</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-4 pb-2">
+                                    <div class="col-md-6 mb-3 pb-2" id="telnofield">
                                         <div class="form-outline">
-                                            <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
-                                            <label class="form-label" for="phoneNumber">Contact</label>
+                                            <input type="tel" id="telnum" class="form-control form-control-lg" onblur="telNoVal()" />
+                                            <label class="form-label" for="telnum">Contact</label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mb-4 pb-2">
-                                    <div class="form-outline">
-                                        <input type="email" id="emailAddress" class="form-control form-control-lg" readonly />
-                                        <label class="form-label" for="emailAddress">Branch</label>
-                                    </div>
+                                <div class="mb-3 pb-2" id="branchfield">
+                                    <select class="form-select" aria-label="Default select example" name="branch" onblur="brVal()">
+                                        <option value="default" selected>Choose your Branch</option>
+                                        <option value="dir">Maganjo</option>
+                                        <option value="mgr">Matugga</option>
+                                    </select>
                                 </div>
                                 <div class="row">
-                            
-                                    <div class="col-md-6 mb-4 pb-2">
+
+                                    <div class="col-md-6 mb-3 pb-2">
                                         <div class="form-outline">
                                             <input type="password" id="pass" class="form-control form-control-lg" />
                                             <label class="form-label" for="pass">Password</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-4 pb-2">
+                                    <div class="col-md-6 mb-3 pb-2">
                                         <div class="form-outline">
                                             <input type="password" id="pass" class="form-control form-control-lg" />
                                             <label class="form-label" for="pass">Confirm Password</label>
@@ -152,6 +163,8 @@
         </div>
     </div>
 
+    <!-- Validation Script -->
+    <script src="indexVal.js"></script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
 </body>
