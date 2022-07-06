@@ -54,7 +54,7 @@ button {
 }
 
 .btn-primary,
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus {
   background-color: #812c13;
   color: white;
   border-color: #812c13;
