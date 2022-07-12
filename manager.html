@@ -198,7 +198,7 @@
                         <form name="produce">
 
                             <div class="col-12 mb-2" id="pdt-name">
-                                <div class="form-outline">
+                                <div class="form-floating">
                                     <input type="text" name="prodname" class="form-control" onblur="pdtVal()"
                                         required />
                                     <label class="form-label" for="prodname">Name of Produce</label>
@@ -237,13 +237,13 @@
 
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-2">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="number" min="100" name="tonnage" class="form-control" required />
                                         <label class="form-label" for="tonnage">Tonnage (Kgs)</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-2">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="number" min="10000" name="buy-price" class="form-control" required />
                                         <label class="form-label" for="buy-price">Bought at (Ugx)</label>
                                     </div>
@@ -251,7 +251,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-2" id="dlr-name">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="text" name="dlrname" class="form-control" onblur="dlrVal(2)" />
                                         <label class="form-label" for="dlrname">Name of Dealer</label>
                                     </div>
@@ -271,13 +271,13 @@
 
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-2">
-                                    <div class="form-outline">
-                                        <input type="tel" id="form6Example1" class="form-control" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="0701-123-456" required />
+                                    <div class="form-floating">
+                                        <input type="tel" id="form6Example1" class="form-control" pattern="[0]{1}[0-9]{9}" placeholder="0701123456" required />
                                         <label class="form-label" for="form6Example1">Contact</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-2">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="number" min="100" id="form6Example2" class="form-control" required />
                                         <label class="form-label" for="form6Example1">Sell at (Ugx)</label>
                                     </div>
@@ -309,7 +309,7 @@
                         <form name="sales">
                             <div class="row">
                                 <div class="col-12 mb-2" id="spdt-name">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="text" name="prodname" class="form-control" required onblur="spdtVal()" />
                                         <label class="form-label" for="prodname">Name of Produce</label>
                                     </div>
@@ -318,13 +318,13 @@
 
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-2">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="number" min="100" name="tonnage" class="form-control" required />
                                         <label class="form-label" for="tonnage">Tonnage (Kgs)</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-2">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="number" min="10000" name="price" class="form-control" />
                                         <label class="form-label" for="price">Amount Paid (Ugx)</label>
                                     </div>
@@ -333,13 +333,13 @@
 
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-2" id="byr-name">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="text" name="byrname" class="form-control" required onblur="byrVal(2)" />
                                         <label class="form-label" for="byrname">Buyer's Name</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 mb-2" id="agt-name">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="text" id="agtname" required onblur="agtVal(2)" class="form-control" />
                                         <label class="form-label" for="agtname">Sales Agent's Name</label>
                                     </div>
@@ -389,20 +389,20 @@
                     <div class="modal-body">
                         <form name="csales">
                             <div class="row">
-                                <div class="col-12 col-md-4 mb-2" id="byr-name">
-                                    <div class="form-outline">
-                                        <input type="text" name="byrname" class="form-control" required onblur="cbyrVal()" />
+                                <div class="col-12 col-md-4 mb-2" id="cbyr-name">
+                                    <div class="form-floating">
+                                        <input type="text" name="byrname" class="form-control" required onblur="cbyrVal(2)" />
                                         <label class="form-label" for="byrname">Buyer's Name</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 mb-2" id="ni-num">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="text" name="nin" class="form-control" required onblur="ninVal()" />
                                         <label class="form-label" for="nin">NIN</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 mb-2" id="loc-field">
-                                    <div class="form-outline">
+                                    <div class="form-floating">
                                         <input type="text" name="location" class="form-control" required onblur="locVal(2)" />
                                         <label class="form-label" for="location">Location</label>
                                     </div>
@@ -411,53 +411,43 @@
 
                             <div class="row">
                                 <div class="col-12 col-md-4 mb-2">
-                                    <div class="form-outline">
-                                        <input type="tel" id="contact" class="form-control" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" placeholder="0701 123 456" required />
+                                    <div class="form-floating">
+                                        <input type="tel" id="contact" class="form-control" pattern="[0]{1}[0-9]{9}" placeholder="0701123456" required />
                                         <label class="form-label" for="contact">Buyer's Contact</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 mb-2">
-                                    <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example2" class="form-control"
-                                            placeholder="" />
-                                        <label class="form-label" for="firstName">Amount Due (UGX)</label>
+                                    <div class="form-floating">
+                                        <input type="number" min="10000" name="amtdue" class="form-control" required />
+                                        <label class="form-label" for="amtdue">Amount Due (UGX)</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 mb-2">
-                                    <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example2" class="form-control"
-                                            placeholder="" />
-                                        <label class="form-label" for="firstName">Tonnage (Kgs)</label>
+                                    <div class="form-floating">
+                                        <input type="number" min="100" name="tonnage" class="form-control" required />
+                                        <label class="form-label" for="tonnage">Tonnage (Kgs)</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-12 col-md-6 mb-2">
+                                <div class="col-12 col-md-4 mb-2">
                                     <div>
                                         <label for="form6Example2">Due Date</label>
-                                        <input type="date" id="form6Example2" class="form-control" />
+                                        <input type="date" id="form6Example2" class="form-control" required />
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 mb-2">
+                                <div class="col-12 col-md-4 mb-2">
                                     <div>
                                         <label for="form6Example2">Date of Dispatch</label>
-                                        <input type="date" id="form6Example2" class="form-control" />
+                                        <input type="date" id="form6Example2" class="form-control" required />
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-2">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" placeholder="" />
-                                        <label class="form-label" for="firstName">Name of Produce</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-2">
+                                <div class="col-12 col-md-4 mb-2" id="cpd-type">
                                     <div>
-                                        <select class="form-select" aria-label="Default select example" name="prodtype">
-                                            <option selected>Type of Produce</option>
+                                        <label for="pdtype">Type of Produce</label>
+                                        <select class="form-select" aria-label="Default select example" name="pdtype" onblur="pdTypeVal()">
+                                            <option value="" selected>Choose Option</option>
                                             <option value="cereal">Cereal</option>
                                             <option value="other">Other</option>
                                         </select>
@@ -466,10 +456,19 @@
                             </div>
 
                             <div class="row">
-                                <div class="col mb-2">
-                                    <div class="form-outline">
-                                        <input type="text" id="salesname" class="form-control" />
-                                        <label class="form-label" for="salesname">Sales Agent's Name</label>
+                                <div class="col-12 mb-2" id="cprod-name">
+                                    <div class="form-floating">
+                                        <input type="text" id="prodname" class="form-control" placeholder required onblur="cpdtVal(2)" />
+                                        <label class="form-label" for="prodname">Name of Produce</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col mb-2" id="cagt-name">
+                                    <div class="form-floating">
+                                        <input type="text" name="agtname" class="form-control" placeholder required onblur="cagtVal(2)" />
+                                        <label class="form-label" for="agtname">Sales Agent's Name</label>
                                     </div>
                                 </div>
                             </div>
@@ -497,18 +496,18 @@
                         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form name="register">
                             <div class="row">
-                                <div class="col-md-6 mb-2">
-                                    <div class="form-outline">
-                                        <input type="text" id="firstName" class="form-control form-control-lg" />
-                                        <label class="form-label" for="firstName">First Name</label>
+                                <div class="col-md-6 mb-2" id="first-name">
+                                    <div class="form-floating">
+                                        <input type="text" name="firstname" class="form-control form-control-lg" placeholder required onblur="fNameVal(2,15)" />
+                                        <label class="form-label" for="firstname">First Name</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-2">
-                                    <div class="form-outline">
-                                        <input type="text" id="lastName" class="form-control form-control-lg" />
-                                        <label class="form-label" for="lastName">Last Name</label>
+                                <div class="col-md-6 mb-2" id="last-name">
+                                    <div class="form-floating">
+                                        <input type="text" id="lastname" class="form-control form-control-lg" placeholder required onblur="lNameVal(2,15)" />
+                                        <label class="form-label" for="lastname">Last Name</label>
                                     </div>
                                 </div>
                             </div>
@@ -524,13 +523,13 @@
                                 <div class="col-md-6 mb-2">
                                     <h6 class="mb-2 pb-1">Gender:</h6>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="femaleGender" value="option1" checked />
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="femaleGender" value="Female" checked />
                                         <label class="form-check-label" for="femaleGender">Female</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="maleGender" value="option2" />
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="maleGender" value="Male" />
                                         <label class="form-check-label" for="maleGender">Male</label>
                                     </div>
                                 </div>
@@ -538,36 +537,36 @@
 
                             <div class="row">
                                 <div class="col-md-6 mb-2 pb-2">
-                                    <div class="form-outline">
-                                        <input type="email" id="emailAddress" class="form-control form-control-lg" />
-                                        <label class="form-label" for="emailAddress">Email</label>
+                                    <div class="form-floating">
+                                        <input type="email" name="email" class="form-control form-control-lg" placeholder required />
+                                        <label class="form-label" for="email">Email</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-2 pb-2">
-                                    <div class="form-outline">
-                                        <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
-                                        <label class="form-label" for="phoneNumber">Contact</label>
+                                <div class="col-md-6 mb-2 pb-2" id="tel-no">
+                                    <div class="form-floating">
+                                        <input type="tel" name="telno" class="form-control form-control-lg" pattern="[0]{1}[0-9]{9}" placeholder="0701234567" required onblur="telNoVal()" />
+                                        <label class="form-label" for="telno">Contact</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-2 pb-2">
-                                <div class="form-outline">
-                                    <input type="email" id="emailAddress" class="form-control form-control-lg"
+                                <div class="form-floating">
+                                    <input type="text" name="branch" class="form-control form-control-lg"
                                         readonly />
-                                    <label class="form-label" for="emailAddress">Branch</label>
+                                    <label class="form-label" for="branch">Branch</label>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6 mb-2 pb-2">
-                                    <div class="form-outline">
-                                        <input type="password" id="pass" class="form-control form-control-lg" />
-                                        <label class="form-label" for="pass">Password</label>
+                                <div class="col-md-6 mb-2 pb-2" id="pwd">
+                                    <div class="form-floating">
+                                        <input type="password" id="password" class="form-control form-control-lg" placeholder required onblur="pwdVal(6)" />
+                                        <label class="form-label" for="password">Password</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-2 pb-2">
-                                    <div class="form-outline">
-                                        <input type="password" id="pass" class="form-control form-control-lg" />
-                                        <label class="form-label" for="pass">Confirm Password</label>
+                                <div class="col-md-6 mb-2 pb-2" id="pwd-conf">
+                                    <div class="form-floating">
+                                        <input type="password" name="passconf" class="form-control form-control-lg" placeholder required onblur="confPwd()" />
+                                        <label class="form-label" for="passconf">Confirm Password</label>
                                     </div>
                                 </div>
                             </div>
@@ -590,7 +589,7 @@
 
     <!-- Copyright -->
     <footer>
-        <div class="text-center p-2 position-fixed bottom-0 end-0" style="background-color: rgba(0, 0, 0, 0.3)">
+        <div class="text-white p-2 position-fixed bottom-0 end-0" style="background-color: rgba(0, 0, 0, 0.4)">
             © 2022 | Gertrude Nabasirye
         </div>
     </footer>
