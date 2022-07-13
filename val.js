@@ -5,6 +5,7 @@ let byrNameField = document.querySelector("#dlr-name");
 let pdTypeField = document.querySelector("#pd-type");
 let pdTimeField = document.querySelector("#pd-time");
 let dlrTypeField = document.querySelector("#dlr-type");
+let ptelNoField = document.querySelector("#ptel-no");
 // Sales form
 let spdtNameField = document.querySelector("#spdt-name");
 let sbyrNameField = document.querySelector("#byr-name");
@@ -16,6 +17,7 @@ let locField = document.querySelector("#loc-field");
 let cpdTypeField = document.querySelector("#cpd-type");
 let cpdtNameField = document.querySelector("#cprod-name");
 let cagtNameField = document.querySelector("#cagt-name");
+let ctelNoField = document.querySelector("#ctel-no");
 // Users Form
 let fNameField = document.querySelector("#first-name");
 let lNameField = document.querySelector("#last-name");
@@ -24,11 +26,15 @@ let posField = document.querySelector("#pos-field");
 let brField = document.querySelector("#branchfield");
 let pwdField = document.querySelector("#pwd");
 let pwdConField = document.querySelector("#pwd-conf");
+// Date Fields
+let procdate = document.produce.procdate;
+let saledate = document.sales.saledate;
+let disdate = document.csales.disdate;
 
 // Regexp
 let letters = /^[A-Za-z]+$/;
 let num = /^[0-9]+$/;
-let alpnum = /^[a-zA-Z0-9]+$/;
+let alpnum = /^[a-zA-Z0-9-.,]+$/;
 let ninExp = /^[A-Z0-9]+$/;
 
 // Create Element
@@ -38,6 +44,23 @@ let errDiv = document.createElement("p");
 errDiv.style.color = "red";
 errDiv.style.fontSize = "13px";
 const bdrStyle = "2px solid red";
+
+// DATE FILL-IN
+const getDate = (field) => {
+  let currentDate = new Date();
+  let dd = currentDate.getDate();
+  let mm = currentDate.getMonth() + 1;
+  let yyyy = currentDate.getFullYear();
+  field.value = "";
+  field.value = `${dd}/${mm}/${yyyy}`;
+};
+const getTime = () => {
+  let time = document.sales.saletime
+  let currentTime = new Date();
+  let hh = currentTime.getHours();
+  let mm = currentTime.getMinutes();
+  time.value = `${hh}:${mm}`;
+};
 
 // PROCUREMENT FORM
 // Validating Produce Name
@@ -52,7 +75,6 @@ const pdtVal = () => {
     pdtNameField.appendChild(errDiv);
   }
 };
-
 // Product Time
 const timeVal = () => {
   let time = document.produce.prodtime;
@@ -100,6 +122,21 @@ const dlrVal = (min) => {
     byrName.style.border = bdrStyle;
     errDiv.textContent = `Name must be made of more than ${min} alphanumeric characters.`;
     byrNameField.appendChild(errDiv);
+    return false;
+  }
+};
+// Validating Contact field.
+const ptelNoVal = () => {
+  let tel = document.produce.telno;
+  let teLen = tel.value.length;
+
+  if (teLen == 10 && tel.value.match(num)) {
+    return true;
+  } else {
+    tel.style.border = bdrStyle;
+    tel.focus();
+    errDiv.textContent = "Format: 0701234567";
+    ptelNoField.appendChild(errDiv);
     return false;
   }
 };
@@ -181,6 +218,21 @@ const locVal = (min) => {
     location.style.border = bdrStyle;
     errDiv.textContent = `Location must be made of more than ${min} alphanumeric characters.`;
     locField.appendChild(errDiv);
+    return false;
+  }
+};
+// Validating Contact field.
+const ctelNoVal = () => {
+  let tel = document.csales.telno;
+  let teLen = tel.value.length;
+
+  if (teLen == 10 && tel.value.match(num)) {
+    return true;
+  } else {
+    tel.style.border = bdrStyle;
+    tel.focus();
+    errDiv.textContent = "Format: 0701234567";
+    ctelNoField.appendChild(errDiv);
     return false;
   }
 };
@@ -270,7 +322,6 @@ const lNameVal = (min, max) => {
   }
   return true;
 };
-
 // Validating Contact field.
 const telNoVal = () => {
   let tel = document.register.telno;

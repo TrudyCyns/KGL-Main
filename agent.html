@@ -22,55 +22,76 @@
 <body>
     <!--Main Navigation-->
     <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="background-color: #812c13;">
-            <!-- Container wrapper -->
-            <div class="container-fluid">
-                <!-- Toggle button -->
-                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
+        style="background-color: #812c13"
+      >
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
 
-                <!-- Collapsible wrapper -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Navbar brand -->
-                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                        <img src="./images/KGLogo.svg" height="20" alt="KGL Logo" loading="lazy" />
-                    </a>
-                    <!-- Left links -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
-                        </li>
-                    </ul>
-                    <!-- Left links -->
-                </div>
-                <!-- Collapsible wrapper -->
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+              <img
+                src="./images/KGLogo.svg"
+                height="20"
+                alt="KGL Logo"
+                loading="lazy"
+              />
+            </a>
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dashboard</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
 
-                <!-- Right elements -->
-                <div class="d-flex align-items-center">
-                    <!-- Avatar -->
-                    <div class="dropdown">
-                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
-                            id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown"
-                            aria-expanded="false">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle"
-                                height="25" alt="Black and White Portrait of a Man" loading="lazy" />
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
-                            <li>
-                                <a class="dropdown-item" href="#">Logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Right elements -->
+          <!-- Right elements -->
+          <div class="d-flex align-items-center">
+            <!-- Avatar -->
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuAvatar"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Hi, UserName
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuAvatar"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </li>
+              </ul>
             </div>
-            <!-- Container wrapper -->
-        </nav>
-        <!-- Navbar -->
+          </div>
+          <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
     </header>
     <!--Main Navigation-->
 
@@ -121,80 +142,147 @@
 
         <!-- Modals -->
         <!-- Sales Modal -->
-        <div class="modal fade" id="newsales" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add Sale</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <!-- 2 column grid layout with text inputs for the first and last names -->
-                            <div class="row">
-                                <div class="col-12 mb-3">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Name of Produce</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">Tonnage (Kgs)</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="firstName">Amount Paid (Ugx)</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="firstName">Buyer's Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="firstName">Sales Agent's Name</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div>
-                                        <label for="form6Example1">Date of Sale</label>
-                                        <input type="date" id="form6Example1" class="form-control"
-                                            placeholder="Buyer's Contact" />
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div>
-                                        <label for="form6Example2">Time of Sale</label>
-                                        <input type="time" id="form6Example2" class="form-control"
-                                            placeholder="Sell at" />
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-secondary">Save Sale Details</button>
-                    </div>
-                </div>
+        <div
+        class="modal fade"
+        id="newsales"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Sale</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-mdb-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
+            <div class="modal-body">
+              <form name="sales">
+                <div class="row">
+                  <div class="col-12 mb-2" id="spdt-name">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        name="prodname"
+                        class="form-control"
+                        required placeholder
+                        onblur="spdtVal()"
+                      />
+                      <label class="form-label" for="prodname"
+                        >Name of Produce</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-2">
+                    <div class="form-floating">
+                      <input
+                        type="number"
+                        min="100"
+                        name="tonnage"
+                        class="form-control"
+                        required placeholder
+                      />
+                      <label class="form-label" for="tonnage"
+                        >Tonnage (Kgs)</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-2">
+                    <div class="form-floating">
+                      <input
+                        type="number"
+                        min="10000"
+                        name="price"
+                        class="form-control" required placeholder
+                      />
+                      <label class="form-label" for="price"
+                        >Amount Paid (Ugx)</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-2" id="byr-name">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        name="byrname"
+                        class="form-control"
+                        required placeholder
+                        onblur="byrVal(2)"
+                      />
+                      <label class="form-label" for="byrname"
+                        >Buyer's Name</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-2" id="agt-name">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        id="agtname"
+                        required
+                        onblur="agtVal(2)"
+                        class="form-control" placeholder
+                      />
+                      <label class="form-label" for="agtname"
+                        >Sales Agent's Name</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-2">
+                    <div>
+                      <label for="saledate">Date of Sale</label>
+                      <input
+                        type="text"
+                        name="saledate"
+                        class="form-control" readonly
+                        required onfocus="getDate(saledate)"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-2">
+                    <div>
+                      <label for="saletime">Time of Sale</label>
+                      <input
+                        type="text"
+                        id="saletime"
+                        class="form-control" readonly
+                        placeholder required onfocus="getTime()"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                data-mdb-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-secondary">
+                Save Sale Details
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
         <!-- Deferred Sales Modal -->
         <div class="modal fade" id="newcredit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
@@ -314,6 +402,7 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+    <script src="./val.js"></script>
 
 </body>
 
