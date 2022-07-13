@@ -284,110 +284,210 @@
         </div>
       </div>
         <!-- Deferred Sales Modal -->
-        <div class="modal fade" id="newcredit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add Sale</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <!-- 2 column grid layout with text inputs for the first and last names -->
-                            <div class="row">
-                                <div class="col-12 col-md-4 mb-3">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="firstName">Buyer's Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4 mb-3">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="firstName">NIN</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4 mb-3">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="firstName">Location</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-4 mb-3">
-                                    <div class="form-outline">
-                                        <input type="tel" id="form6Example2" class="form-control" placeholder="" />
-                                        <label class="form-label" for="firstName">Buyer's Contact</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4 mb-3">
-                                    <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example2" class="form-control"
-                                            placeholder="" />
-                                        <label class="form-label" for="firstName">Amount Due (UGX)</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4 mb-3">
-                                    <div class="form-outline">
-                                        <input type="number" min="0" id="form6Example2" class="form-control"
-                                            placeholder="" />
-                                        <label class="form-label" for="firstName">Tonnage (Kgs)</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div>
-                                        <label for="form6Example2">Due Date</label>
-                                        <input type="date" id="form6Example2" class="form-control" />
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div>
-                                        <label for="form6Example2">Date of Dispatch</label>
-                                        <input type="date" id="form6Example2" class="form-control" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" placeholder="" />
-                                        <label class="form-label" for="firstName">Name of Produce</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div>
-                                        <select class="form-select" aria-label="Default select example" name="prodtype">
-                                            <option selected>Type of Produce</option>
-                                            <option value="cereal">Cereal</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col mb-3">
-                                    <div class="form-outline">
-                                        <input type="text" id="salesname" class="form-control" />
-                                        <label class="form-label" for="salesname">Sales Agent's Name</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-secondary">Save Sale on Credit</button>
-                    </div>
-                </div>
+        <div
+        class="modal fade"
+        id="newcredit"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Add Sale On Credit
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-mdb-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
+            <div class="modal-body">
+              <form name="csales">
+                <div class="row">
+                  <div class="col-12 col-md-4 mb-2" id="cbyr-name">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        name="byrname"
+                        class="form-control"
+                        required placeholder
+                        onblur="cbyrVal(2)"
+                      />
+                      <label class="form-label" for="byrname"
+                        >Buyer's Name</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-2" id="ni-num">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        name="nin"
+                        class="form-control"
+                        required placeholder
+                        onblur="ninVal()"
+                      />
+                      <label class="form-label" for="nin">NIN</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-2" id="loc-field">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        name="location"
+                        class="form-control"
+                        required placeholder
+                        onblur="locVal(2)"
+                      />
+                      <label class="form-label" for="location">Location</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-md-4 mb-2" id="ctel-no">
+                    <div class="form-floating">
+                      <input
+                        type="tel"
+                        id="telno"
+                        class="form-control"
+                        pattern="[0]{1}[0-9]{9}"
+                        placeholder="0701123456"
+                        required
+                        onblur="ctelNoVal()"
+                      />
+                      <label class="form-label" for="telno"
+                        >Buyer's Contact</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-2">
+                    <div class="form-floating">
+                      <input
+                        type="number"
+                        min="10000"
+                        name="amtdue"
+                        class="form-control"
+                        required placeholder
+                      />
+                      <label class="form-label" for="amtdue"
+                        >Amount Due (UGX)</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-2">
+                    <div class="form-floating">
+                      <input
+                        type="number"
+                        min="100"
+                        name="tonnage"
+                        class="form-control"
+                        required placeholder
+                      />
+                      <label class="form-label" for="tonnage"
+                        >Tonnage (Kgs)</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-md-4 mb-2">
+                    <div>
+                      <label for="disdate">Date of Dispatch</label>
+                      <input
+                        type="text"
+                        id="disdate"
+                        class="form-control"
+                        required readonly onfocus="getDate(disdate)"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-2">
+                    <div>
+                      <label for="duedate">Due Date</label>
+                      <input
+                        type="date"
+                        id="duedate"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-2" id="cpd-type">
+                    <div>
+                      <label for="pdtype">Type of Produce</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                        name="pdtype"
+                        onblur="pdTypeVal()"
+                      >
+                        <option value="" selected>Choose Option</option>
+                        <option value="cereal">Cereal</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 mb-2" id="cprod-name">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        id="prodname"
+                        class="form-control"
+                        placeholder
+                        required
+                        onblur="cpdtVal(2)"
+                      />
+                      <label class="form-label" for="prodname"
+                        >Name of Produce</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col mb-2" id="cagt-name">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        name="agtname"
+                        class="form-control"
+                        placeholder
+                        required
+                        onblur="cagtVal(2)"
+                      />
+                      <label class="form-label" for="agtname"
+                        >Sales Agent's Name</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                data-mdb-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-secondary">
+                Save Sale on Credit
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
         <!-- Modals - end -->
     </main>
     <!--Main layout-->
@@ -402,7 +502,7 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
-    <script src="./val.js"></script>
+    <script src="./salesVal.js"></script>
 
 </body>
 

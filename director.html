@@ -147,98 +147,204 @@
 
         <!-- Modals -->
         <!-- Users Modal -->
-        <div class="modal fade" id="newuser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add Sales Agent</h5>
-                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="firstName" class="form-control form-control-lg" />
-                                        <label class="form-label" for="firstName">First Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="form-outline">
-                                        <input type="text" id="lastName" class="form-control form-control-lg" />
-                                        <label class="form-label" for="lastName">Last Name</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div>
-                                        <label for="position">Position</label>
-                                        <input type="text" class="form-control form-control-lg" id="position"
-                                            value="Sales Agent" readonly />
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <h6 class="mb-3 pb-1">Gender: </h6>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="femaleGender" value="option1" checked />
-                                        <label class="form-check-label" for="femaleGender">Female</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="maleGender" value="option2" />
-                                        <label class="form-check-label" for="maleGender">Male</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6 mb-4 pb-2">
-                                    <div class="form-outline">
-                                        <input type="email" id="emailAddress" class="form-control form-control-lg" />
-                                        <label class="form-label" for="emailAddress">Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4 pb-2">
-                                    <div class="form-outline">
-                                        <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
-                                        <label class="form-label" for="phoneNumber">Contact</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4 pb-2">
-                                <div class="form-outline">
-                                    <input type="email" id="emailAddress" class="form-control form-control-lg"
-                                        readonly />
-                                    <label class="form-label" for="emailAddress">Branch</label>
-                                </div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col-md-6 mb-4 pb-2">
-                                    <div class="form-outline">
-                                        <input type="password" id="pass" class="form-control form-control-lg" />
-                                        <label class="form-label" for="pass">Password</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4 pb-2">
-                                    <div class="form-outline">
-                                        <input type="password" id="pass" class="form-control form-control-lg" />
-                                        <label class="form-label" for="pass">Confirm Password</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-mdb-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-secondary">Save Sales Agent</button>
-                    </div>
-                </div>
+        <div
+        class="modal fade"
+        id="newuser"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Add User
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-mdb-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
+            <div class="modal-body">
+              <form name="register">
+                <div class="row">
+                  <div class="col-md-6 mb-2" id="first-name">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        name="firstname"
+                        class="form-control form-control-lg"
+                        placeholder
+                        required
+                        onblur="fNameVal(2,15)"
+                      />
+                      <label class="form-label" for="firstname"
+                        >First Name</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-2" id="last-name">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        id="lastname"
+                        class="form-control form-control-lg"
+                        placeholder
+                        required
+                        onblur="lNameVal(2,15)"
+                      />
+                      <label class="form-label" for="lastname">Last Name</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-md-4 mb-2" id="user-role">
+                    <div>
+                      <label class="form-label" for="role"
+                        >Role:</label
+                      >
+                      <select
+                        class="form-select"
+                        name="role"
+                        onblur="roleVal()"
+                        required
+                      >
+                        <option value="" selected>Select Role</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Sales Agent">Sales Agent</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-2" id="user-branch">
+                    <div>
+                      <label class="form-label" for="branch"
+                        >Branch:</label
+                      >
+                      <select
+                        class="form-select"
+                        name="branch"
+                        onblur="branchVal()"
+                        required
+                      >
+                        <option value="" selected>Select Branch</option>
+                        <option value="Mattuga">Mattuga</option>
+                        <option value="Sales Agent">Maganjo</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-2">
+                    <label for="gender"
+                        >Gender:</label
+                      >
+                    <div class="form-check ">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="femaleGender"
+                        value="Female"
+                        checked
+                      />
+                      <label class="form-check-label" for="femaleGender"
+                        >Female</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="maleGender"
+                        value="Male"
+                      />
+                      <label class="form-check-label" for="maleGender"
+                        >Male</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-2 pb-2">
+                    <div class="form-floating">
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control form-control-lg"
+                        placeholder
+                        required
+                      />
+                      <label class="form-label" for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-2 pb-2" id="tel-no">
+                    <div class="form-floating">
+                      <input
+                        type="tel"
+                        name="telno"
+                        class="form-control form-control-lg"
+                        pattern="[0]{1}[0-9]{9}"
+                        placeholder="0701234567"
+                        required
+                        onblur="telNoVal()"
+                      />
+                      <label class="form-label" for="telno">Contact</label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-6 mb-2 pb-2" id="pwd">
+                    <div class="form-floating">
+                      <input
+                        type="password"
+                        id="password"
+                        class="form-control form-control-lg"
+                        placeholder
+                        required
+                        onblur="pwdVal(6)"
+                      />
+                      <label class="form-label" for="password">Password</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-2 pb-2" id="pwd-conf">
+                    <div class="form-floating">
+                      <input
+                        type="password"
+                        name="passconf"
+                        class="form-control form-control-lg"
+                        placeholder
+                        required
+                        onblur="confPwd()"
+                      />
+                      <label class="form-label" for="passconf"
+                        >Confirm Password</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                data-mdb-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-secondary">
+                Save User
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
         <!-- Modals - end -->
     </main>
     <!--Main layout-->
@@ -253,6 +359,7 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+    <script src="./dirVal.js"></script>
 
 </body>
 
